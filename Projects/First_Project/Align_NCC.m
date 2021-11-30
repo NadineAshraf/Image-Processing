@@ -1,0 +1,33 @@
+function [Aligned_NCC_Image,G_SH, R_SH]= Align_NCC(Input_Image)
+fullim = Input_Image;
+fullim = im2double(fullim);
+height = floor(size(fullim,1)/3);
+width  = floor(size(fullim,2));
+B = fullim(1:height,:);
+G = fullim(height+1:height*2,:);
+R = fullim(height*2+1:height*3,:);
+R = double(R);
+G = double(G);
+B = double(B);
+SHISTS = zeros(2,2);
+R_edge = edge(R, 'canny');
+G_edge = edge(G, 'canny');
+B_edge = edge(B, 'canny');
+SHISTS(1,:) = NCC(G_edge, B_edge);
+SHISTS(2,:) = NCC(R_edge, B_edge);
+G_SHIST = imtranslate(G, [SHISTS(1,2), SHISTS(1,1)]);
+R_SHIST = imtranslate(R, [SHISTS(2,2), SHISTS(2,1)]);
+G_SH = SHISTS(1,:) ;
+R_SH = SHISTS(2,:) ;
+Aligned_NCC_Image = cat(3, R_SHIST, G_SHIST, B);
+Aligned_NCC_Image = Aligned_NCC_Image(0.1*height:0.9*height,0.1*width:0.9*width,:);
+end
+function shift = NCC(I2, I1)
+[row, col] = size(I2);         
+CC_VALUE = normxcorr2(I2, I1);             
+[max_cc, ind_cc] = max(abs(CC_VALUE(:)));    % Find the max NCC value 
+[y, x] = ind2sub(size(CC_VALUE), ind_cc(1)); % Find the location of the max NCC value
+Best_match_row = y - (row-1);                % Calculate the row location of the max NCC value
+Best_match_col = x - (col-1);                %Calculate the column location of the max NCC value
+shift = [Best_match_row, Best_match_col];    % Shifts in both directions
+end
