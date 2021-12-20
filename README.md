@@ -1,4 +1,4 @@
-Hello, This project is for colorizing images using Matlab.
+Hello, This project is for Colorizing Images using Matlab.
 
 First : Trivial Solution
 1. Read the input image into a matrix.
