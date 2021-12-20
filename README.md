@@ -1,4 +1,5 @@
 Hello, This project is for colorizing images using Matlab.
+
 First : Trivial Solution
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
