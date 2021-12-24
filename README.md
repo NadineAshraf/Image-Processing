@@ -1,11 +1,11 @@
-Hello, This project is for Colorizing Images using Matlab.
+**Hello, This project is for Colorizing Images using Matlab.**
 
-First : Trivial Solution
+# First : Trivial Solution
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
 3. Combine the three channels in one colored image.
 
-Second : SSD Alignment
+# Second : SSD Alignment
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
 3. Choose a reasonable range for channels alignment.
@@ -17,7 +17,7 @@ Second : SSD Alignment
 9. Combine the three channels in one colored image.
 10. Finally to improve the quality of the output image we can use a sharpening filter.
 
-Third : Enhanced SSD
+# Third : Enhanced SSD
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
 3. Choose a reasonable range for channels alignment.
@@ -29,7 +29,7 @@ Third : Enhanced SSD
 9. Combine the three channels in one colored image.
 10. Finally to improve the quality of the output image we can use a sharpening filter.
 
-Fourth: Normal Cross Correlation
+# Fourth: Normal Cross Correlation
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
 3. Choose a reasonable range for channels alignment.
