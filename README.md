@@ -4,7 +4,6 @@
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
 3. Combine the three channels in one colored image.
-
 # Second : SSD Alignment
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
@@ -40,3 +39,5 @@
 8. Shift the two channels by according to the displacement selected in the pervious step.
 9. Combine the three channels in one colored image.
 10. Finally to improve the quality of the output image we can use a sharpening filter.
+# Result
+![image](https://user-images.githubusercontent.com/91349300/153708135-b1199aad-851c-4bd0-a2e2-7e070d268b06.png)
