@@ -1,8 +1,8 @@
 **Hello, This project is for Colorizing Images using Matlab.**
 # Team Members
-  • Eslam Hussein Mohamed.                                                                                                                                                      
-  • Nadine Ashraf Adeeb.                                                                                                                                                                              
-  • Tasneem Yassin Mostafa.
+ > Eslam Hussein Mohamed.                                                                                                                                                     
+ > Nadine Ashraf Adeeb.                                                                                                                                                                              
+ > Tasneem Yassin Mostafa.
 # First : Trivial Solution
 1. Read the input image into a matrix.
 2. Divide the image into three equal parts (channels) and store them  into three matrices.
